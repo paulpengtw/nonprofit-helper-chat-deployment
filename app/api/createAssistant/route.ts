@@ -17,7 +17,7 @@ const openai = new OpenAI({
     apiKey: process.env.OPENAI_API_KEY,
   });
 
-
+const systemInstructions: string = 'reply can only be in zh-tw, without any zh-cn. you are going to answer question related to Taiwanese nonprofit organization regulations and user want to find';
 
   export async function POST(req: NextRequest) {
     if (req.method === 'POST') {
@@ -33,7 +33,7 @@ const openai = new OpenAI({
   
           const assistantOptions: any = {
               name: assistantName,
-              instructions: assistantDescription,
+              instructions: systemInstructions + assistantDescription,
               model: assistantModel,
               tools: [{ "type": "retrieval" }],
           };

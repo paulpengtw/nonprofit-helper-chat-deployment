@@ -5886,7 +5886,7 @@ export const g0vIcon = () => {
       width="20"
       height="20"
 			viewBox="0 0 1024 1024"
-			enable-background="new 0 0 1024 1024"
+			fill="currentColor"
     >
 <path fill="#FFFFFF" opacity="1.000000" stroke="none" 
 	d="

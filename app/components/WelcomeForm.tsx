@@ -87,7 +87,7 @@ const WelcomeForm: React.FC<WelcomeFormProps> = ({
             type="text"
             placeholder="請簡述問題的大致類型（e.g. 理監事會相關規定 或 新成立協會）"
             value={assistantDescription}
-            onChange={(e) => setAssistantDescription('reply can only be in zh-tw, without any zh-cn. you are going to answer question related to Taiwanese nonprofit organization regulations and ' + e.target.value)}
+            onChange={(e) => setAssistantDescription(e.target.value)}
             required
             className="p-2 border border-gray-200 rounded-md"
           />

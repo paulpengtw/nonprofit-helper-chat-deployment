@@ -4,12 +4,17 @@ const nextConfig = {
     return [
       {
         source: "/github",
-        destination: "https://github.com/admineral/OpenAI-Assistant-API-Chat",
+        destination: "https://github.com/g0v",
         permanent: true,
       },
       {
         source: "/deploy",
-        destination: "https://open-ai-assistant-api-chat.vercel.app",
+        destination: "https://g0v.hackmd.io/@nonprofit-helper/nonprofit-helper-home",
+        permanent: true,
+      },
+      {
+        source: "/g0v",
+        destination: "https://sch001.g0v.tw",
         permanent: true,
       },
     ];
