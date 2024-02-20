@@ -5879,6 +5879,19 @@ export const GithubIcon = () => {
   );
 };
 
+// .babelrc
+{
+	"presets": [
+		"@babel/preset-env",
+		"@babel/preset-react"
+	],
+	"plugins": [
+		["@babel/plugin-transform-react-jsx", {
+			"throwIfNamespace": false
+		}]
+	]
+}
+
 export const g0vIcon = () => {
   return (
     <svg

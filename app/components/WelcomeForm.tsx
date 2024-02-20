@@ -85,25 +85,25 @@ const WelcomeForm: React.FC<WelcomeFormProps> = ({
           />
           <input
             type="text"
-            placeholder="Assistant Description"
+            placeholder="請簡述問題的大致類型（e.g. 理監事會相關規定 或 新成立協會）"
             value={assistantDescription}
-            onChange={(e) => setAssistantDescription(e.target.value)}
+            onChange={(e) => setAssistantDescription('reply can only be in zh-tw, without any zh-cn. you are going to answer question related to Taiwanese nonprofit organization regulations and ' + e.target.value)}
             required
             className="p-2 border border-gray-200 rounded-md"
           />
           <div>
             <button
               type="button"
-              onClick={() => setAssistantModel('gpt-4-1106-preview')}
-              className={`p-1 border border-gray-400 rounded-md ${assistantModel === 'gpt-4-1106-preview' ? 'bg-blue-500 text-white' : ''}`}
+              onClick={() => setAssistantModel('gpt-4-0125-preview')}
+              className={`p-1 border border-gray-400 rounded-md ${assistantModel === 'gpt-4-0125-preview' ? 'bg-blue-500 text-white' : ''}`}
               disabled={process.env.NEXT_PUBLIC_DEMO_MODE === 'true'}
             >
               GPT-4
             </button>
             <button
               type="button"
-              onClick={() => setAssistantModel('gpt-3.5-turbo-1106')}
-              className={`p-1 border border-gray-400 rounded-md ${assistantModel === 'gpt-3.5-turbo-1106' ? 'bg-blue-500 text-white' : ''}`}
+              onClick={() => setAssistantModel('gpt-3.5-turbo-0125')}
+              className={`p-1 border border-gray-400 rounded-md ${assistantModel === 'gpt-3.5-turbo-0125' ? 'bg-blue-500 text-white' : ''}`}
             >
               GPT-3.5
             </button>
