@@ -9,8 +9,8 @@
 
 Welcome to the OpenAI Assistant API Chat repository! This innovative chat application allows users to interact with an AI assistant powered by OpenAI's latest "gpt-4-1106-preview" model. It's an exciting space where technology meets conversation, offering a unique experience of AI interaction.
 
-# [Demo](https://open-ai-assistant-api-chat.vercel.app)
-<img src="Public/File_upload.gif" alt="Agent42" width="600px">
+# [Demo-URL haven't added yet]()
+<img src="Public/File_upload.gif" alt="nonprofit-helper-chat" width="600px">
 
 
 ## Beta & Work in Progress
@@ -265,3 +265,6 @@ export const updateChatState = (prevMessages: Message[], newMessages: Message[],
 ### API Routes (`/api/*.ts`)
 These files define various API routes for handling tasks like creating assistants, listing messages, checking run status, etc. They interact with the OpenAI API and provide endpoints for the frontend to call.
 
+
+### forked
+- this project is forked from Agent42

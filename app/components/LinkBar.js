@@ -3,6 +3,13 @@ import { VercelIcon, GithubIcon } from "../icons";
 const LinkBar = () => (
   <div className="absolute top-5 hidden w-full justify-between px-5 sm:flex">
     <a
+      href="/g0v"
+      target="_blank"
+      className="rounded-lg p-2 transition-colors duration-200 hover:bg-stone-100 sm:bottom-auto"
+    >
+      <g0vIcon />
+    </a>
+    <a
       href="/deploy"
       target="_blank"
       className="rounded-lg p-2 transition-colors duration-200 hover:bg-stone-100 sm:bottom-auto"
@@ -16,13 +23,7 @@ const LinkBar = () => (
     >
       <GithubIcon />
     </a>
-    <a
-      href="/g0v"
-      target="_blank"
-      className="rounded-lg p-2 transition-colors duration-200 hover:bg-stone-100 sm:bottom-auto"
-    >
-      <g0vIcon />
-    </a>
+    
   </div>
 );
 
