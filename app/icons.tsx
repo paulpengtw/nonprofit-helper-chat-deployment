@@ -5886,7 +5886,6 @@ export const g0vIcon = () => {
       width="20"
       height="20"
       viewBox="0 0 24 26.583"
-      style="vertical-align:middle;"
     >
 
   <polygon fill="#c42026" points="24,0 20.812,0 0,26.583 3.236,26.583"/>
