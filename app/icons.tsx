@@ -5879,19 +5879,6 @@ export const GithubIcon = () => {
   );
 };
 
-// .babelrc
-{
-	"presets": [
-		"@babel/preset-env",
-		"@babel/preset-react"
-	],
-	"plugins": [
-		["@babel/plugin-transform-react-jsx", {
-			"throwIfNamespace": false
-		}]
-	]
-}
-
 export const g0vIcon = () => {
   return (
     <svg
@@ -5900,7 +5887,6 @@ export const g0vIcon = () => {
       height="20"
 			viewBox="0 0 1024 1024"
 			enable-background="new 0 0 1024 1024"
-			xml:space="preserve"
     >
 <path fill="#FFFFFF" opacity="1.000000" stroke="none" 
 	d="
