@@ -16,6 +16,13 @@ const LinkBar = () => (
     >
       <GithubIcon />
     </a>
+    <a
+      href="/g0v"
+      target="_blank"
+      className="rounded-lg p-2 transition-colors duration-200 hover:bg-stone-100 sm:bottom-auto"
+    >
+      <g0vIcon />
+    </a>
   </div>
 );
 
