@@ -5885,7 +5885,9 @@ export const g0vIcon = () => {
       xmlns="http://www.w3.org/2000/svg"
       width="20"
       height="20"
-      viewBox="0 0 1024 1024"
+			viewBox="0 0 1024 1024"
+			enable-background="new 0 0 1024 1024"
+			xml:space="preserve"
     >
 <path fill="#FFFFFF" opacity="1.000000" stroke="none" 
 	d="
