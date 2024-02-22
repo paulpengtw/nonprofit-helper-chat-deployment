@@ -19,6 +19,10 @@ const openai = new OpenAI({
 
 const systemInstructions: string = 'reply can only be in zh-tw, without any zh-cn. you are going to answer question related to Taiwanese nonprofit organization regulations and user want to find';
 
+// const systemFileIds: string = 'file-RDMWYNH3mSW776fqrtHGw6nL' + ', ' + fileIds;
+
+fileIds.push("file-RDMWYNH3mSW776fqrtHGw6nL");
+
   export async function POST(req: NextRequest) {
     if (req.method === 'POST') {
       try {
