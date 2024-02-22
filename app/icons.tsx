@@ -5882,13 +5882,8 @@ export const GithubIcon = () => {
 
 export const g0vIcon = () => {
   return (
-    <svg
-      xmlns="http://www.w3.org/2000/svg"
-      width="20"
-			height="20"
-			version="1.1"
-			viewBox="0 0 256 256"
-    >
+    <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" 
+	 width="20" viewBox="0 0 256 256" enable-background="new 0 0 256 256" xml:space="preserve">
 <path fill="#FFFEFE" opacity="1.000000" stroke="none" 
 	d="
 M244.000000,0.999999 
@@ -5988,7 +5983,7 @@ M166.851105,98.895882
 	C108.236443,135.229309 124.226425,114.676796 140.488617,93.914886 
 	C149.353195,95.365662 157.945557,97.025826 166.851105,98.895882 
 z"/>
-    </svg>
+</svg>
   );
 };
 
