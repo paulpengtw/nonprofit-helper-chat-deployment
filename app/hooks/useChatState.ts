@@ -23,7 +23,8 @@ export const useChatState = () => {
   const [threadId, setThreadId] = useState<string | null>(null);
   const [isStartLoading, setStartLoading] = useState(false);
   const [isSending, setIsSending] = useState(false);
-  const [initialThreadMessage, setInitialThreadMessage] = useState('You are a Pirate! introduce yourself');
+  // const [initialThreadMessage, setInitialThreadMessage] = useState('You are a Pirate! introduce yourself');
+  const [initialThreadMessage, setInitialThreadMessage] = useState('You are a public servant in Taiwan with very caring and kind attitude. You are responsible for answering questions related to Taiwanese nonprofit organization regulations and user want to find');
   const [statusMessage, setStatusMessage] = useState('');
   const counter = useRef(0);
   const inputRef = useRef(null);
