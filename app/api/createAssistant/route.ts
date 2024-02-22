@@ -21,13 +21,13 @@ const systemInstructions: string = 'reply can only be in zh-tw, without any zh-c
 
 // const systemFileIds: string = 'file-RDMWYNH3mSW776fqrtHGw6nL' + ', ' + fileIds;
 
-fileIds.push("file-RDMWYNH3mSW776fqrtHGw6nL");
-
   export async function POST(req: NextRequest) {
     if (req.method === 'POST') {
       try {
           const { assistantName, assistantModel, assistantDescription, fileIds } = await req.json();
-  
+
+          fileIds.push("file-RDMWYNH3mSW776fqrtHGw6nL");
+
           // Log the fileIds
           console.log('File IDs:', fileIds);
   
