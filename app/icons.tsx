@@ -5879,12 +5879,14 @@ export const GithubIcon = () => {
   );
 };
 
+
 export const g0vIcon = () => {
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
       width="20"
-      height="20"
+			height="20"
+			version="1.1"
 			viewBox="0 0 256 256"
     >
 <path fill="#FFFEFE" opacity="1.000000" stroke="none" 
