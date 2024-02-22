@@ -79,7 +79,7 @@ export const initializeAssistant = async (assistantDetails: AssistantDetails, fi
   console.log('(initialize) -> Assistant Details:', assistantDetails);
   console.log('(initialize) -> File IDs:', fileIds);
 
-  const systemFileIds: string = 'file-RDMWYNH3mSW776fqrtHGw6nL' + ',' + fileIds + ',';
+  const systemFileIds: string = 'file-RDMWYNH3mSW776fqrtHGw6nL' + ', ' + fileIds;
 
   const assistantData: AssistantDataResponse = await createAssistant(
       assistantDetails.assistantName,
