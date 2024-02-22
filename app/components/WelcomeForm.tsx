@@ -77,7 +77,7 @@ const WelcomeForm: React.FC<WelcomeFormProps> = ({
         <form className="flex flex-col space-y-3">
           <input
             type="text"
-            placeholder="Assistant Name"
+            placeholder="幫本次對話紀錄取名"
             value={assistantName}
             onChange={(e) => setAssistantName(e.target.value)}
             required
@@ -98,14 +98,14 @@ const WelcomeForm: React.FC<WelcomeFormProps> = ({
               className={`p-1 border border-gray-400 rounded-md ${assistantModel === 'gpt-4-0125-preview' ? 'bg-blue-500 text-white' : ''}`}
               disabled={process.env.NEXT_PUBLIC_DEMO_MODE === 'true'}
             >
-              GPT-4
+              GPT-4 貴但相對精確
             </button>
             <button
               type="button"
               onClick={() => setAssistantModel('gpt-3.5-turbo-0125')}
               className={`p-1 border border-gray-400 rounded-md ${assistantModel === 'gpt-3.5-turbo-0125' ? 'bg-blue-500 text-white' : ''}`}
             >
-              GPT-3.5
+              GPT-3.5 較不精準
             </button>
           </div>
         </form>

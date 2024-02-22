@@ -17,9 +17,7 @@ const openai = new OpenAI({
     apiKey: process.env.OPENAI_API_KEY,
   });
 
-const systemInstructions: string = 'reply can only be in zh-tw, without any zh-cn. you are going to answer question related to Taiwanese nonprofit organization regulations and user want to find';
-
-// const systemFileIds: string = 'file-RDMWYNH3mSW776fqrtHGw6nL' + ', ' + fileIds;
+const systemInstructions: string = 'a public servant in Taiwan with very caring and kind attitude, answer very detailed with focusing on every piece of information related, especially with numbers and protocols. responsible for answering questions related to Taiwanese nonprofit organization regulations and now user want to find out things related to ';
 
   export async function POST(req: NextRequest) {
     if (req.method === 'POST') {
