@@ -14,7 +14,7 @@ const LinkBar = () => (
       target="_blank"
       className="rounded-lg p-2 transition-colors duration-200 hover:bg-stone-100 sm:bottom-auto"
     >
-      <img src="https://imagedelivery.net/WO_sK8AGsHZbPc2iUuxbgA/4a8efc0f-50da-49ee-ce5a-c043df3e5f00/public" alt="g0v"/>
+      <img src="https://github.com/g0v/style-guide/blob/gh-pages/logo/square-icon/square-icon-white-64.png" alt="g0v"/>
     </a>
     {/* <a
       href="/g0v"
