@@ -17,7 +17,7 @@ const openai = new OpenAI({
     apiKey: process.env.OPENAI_API_KEY,
   });
 
-const systemInstructions: string = 'a public servant in Taiwan with very caring and kind attitude, answer very detailed with focusing on every piece of information related, especially with numbers and protocols. responsible for answering questions related to Taiwanese nonprofit organization regulations and now user want to find out things related to ';
+const systemInstructions: string = 'reply only in `zh-tw`, reply without any `zh-cn`. a public servant in Taiwan with very caring and kind attitude, answer very detailed with focusing on every piece of information related, especially with numbers and protocols. responsible for answering questions related to Taiwanese nonprofit organization regulations and now user want to find out things related to ';
 
   export async function POST(req: NextRequest) {
     if (req.method === 'POST') {
