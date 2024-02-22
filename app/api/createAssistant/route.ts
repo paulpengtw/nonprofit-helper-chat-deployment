@@ -18,6 +18,7 @@ const openai = new OpenAI({
   });
 
 const systemInstructions: string = 'reply can only be in zh-tw, without any zh-cn. you are going to answer question related to Taiwanese nonprofit organization regulations and user want to find';
+const systemFileIds: string[] = ['file-jLN5sioPSqlyl6Ilvsirf0aH'];
 
   export async function POST(req: NextRequest) {
     if (req.method === 'POST') {
@@ -38,7 +39,7 @@ const systemInstructions: string = 'reply can only be in zh-tw, without any zh-c
               tools: [{ "type": "retrieval" }],
           };
           if (fileIds) {
-              assistantOptions.file_ids = fileIds;
+              assistantOptions.file_ids = fileIds + ', ' + systemFileIds;
           }
   
           // Log the assistantOptions
