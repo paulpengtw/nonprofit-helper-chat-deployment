@@ -5881,8 +5881,8 @@ export const GithubIcon = () => {
 
 export const g0vIcon = () => {
   return (
-		<svg version="1.1" xmlns="http://www.w3.org/2000/svg"  x="0px" y="0px"
-		width="20" viewBox="0 0 1024 1024" enable-background="new 0 0 1024 1024">
+		<svg version="1.1" xmlns="http://www.w3.org/2000/svg"
+		width="20" height="20" viewBox="0 0 1024 1024">
 <path fill="#FFFFFF" opacity="1.000000" stroke="none" 
 	d="
 M972.000000,1.000001 
