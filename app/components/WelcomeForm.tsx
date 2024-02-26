@@ -67,17 +67,20 @@ const WelcomeForm: React.FC<WelcomeFormProps> = ({
   }, [fileIds]);
 
     const presetQuestions = [
-    'What is the mission of your organization?',
-    'Can you tell me more about your services?',
-    'What is the history of your organization?',
+    '如何籌備和召開會員大會？',
+    '非營利組織對於受贈財産的使用與管理有何限制?',
+    '理事會的選舉和任期規定怎麼樣才合法?',
   ];
 
   return (
     <div className="border-gray-500 bg-gray-200 sm:mx-0 mx-5 mt-20 max-w-screen-md rounded-md border-2 sm:w-full">
       <div className="flex flex-col space-y-4 p-7 sm:p-10">
         <h1 className="text-lg font-semibold text-black">
-          Welcome to nonprofit-helper!
+          歡迎使用 nonprofit-helper 會務 E 化小幫手 對話框！
         </h1>
+        <p className="text-sm text-gray-500">
+          本工具尚在實驗階段，AI 的回應不保證 100% 正確，僅供參考。若有法律問題，請洽律師或主管機關。
+        </p>
         <form className="flex flex-col space-y-3">
           <input
             type="text"
@@ -99,7 +102,7 @@ const WelcomeForm: React.FC<WelcomeFormProps> = ({
         onChange={(e) => setAssistantDescription(e.target.value)}
         className="p-2 border border-gray-200 rounded-md"
       >
-        <option value="">Select a preset question</option>
+        <option value="">挑選符合需求的問題</option>
         {presetQuestions.map((question, index) => (
           <option key={index} value={question}>
             {question}
@@ -108,7 +111,7 @@ const WelcomeForm: React.FC<WelcomeFormProps> = ({
       </select>
       <input
         type="text"
-        placeholder="請簡述問題的大致類型（e.g. 理監事會相關規定 或 新成立協會）"
+        placeholder="或請簡述問題的大致類型（e.g. 理監事會相關規定 或 新成立協會）"
         value={assistantDescription}
         onChange={(e) => setAssistantDescription(e.target.value)}
         required
@@ -121,14 +124,14 @@ const WelcomeForm: React.FC<WelcomeFormProps> = ({
               className={`p-1 border border-gray-400 rounded-md ${assistantModel === 'gpt-4-0125-preview' ? 'bg-blue-500 text-white' : ''}`}
               disabled={process.env.NEXT_PUBLIC_DEMO_MODE === 'true'}
             >
-              GPT-4 貴但相對精確
+              GPT-4 速度慢，相對精確
             </button>
             <button
               type="button"
               onClick={() => setAssistantModel('gpt-3.5-turbo-0125')}
               className={`p-1 border border-gray-400 rounded-md ${assistantModel === 'gpt-3.5-turbo-0125' ? 'bg-blue-500 text-white' : ''}`}
             >
-              GPT-3.5 較不精準
+              GPT-3.5 超快，相對較不精準
             </button>
           </div>
         </form>
