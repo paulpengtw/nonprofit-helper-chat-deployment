@@ -66,7 +66,11 @@ const WelcomeForm: React.FC<WelcomeFormProps> = ({
     console.log("Aktive Datei-IDs:", fileIds);
   }, [fileIds]);
 
-
+    const presetQuestions = [
+    'What is the mission of your organization?',
+    'Can you tell me more about your services?',
+    'What is the history of your organization?',
+  ];
 
   return (
     <div className="border-gray-500 bg-gray-200 sm:mx-0 mx-5 mt-20 max-w-screen-md rounded-md border-2 sm:w-full">
@@ -83,14 +87,33 @@ const WelcomeForm: React.FC<WelcomeFormProps> = ({
             required
             className="p-2 border border-gray-200 rounded-md"
           />
-          <input
+          {/* <input
             type="text"
             placeholder="請簡述問題的大致類型（e.g. 理監事會相關規定 或 新成立協會）"
             value={assistantDescription}
             onChange={(e) => setAssistantDescription(e.target.value)}
             required
             className="p-2 border border-gray-200 rounded-md"
-          />
+          /> */}
+          <select
+        onChange={(e) => setAssistantDescription(e.target.value)}
+        className="p-2 border border-gray-200 rounded-md"
+      >
+        <option value="">Select a preset question</option>
+        {presetQuestions.map((question, index) => (
+          <option key={index} value={question}>
+            {question}
+          </option>
+        ))}
+      </select>
+      <input
+        type="text"
+        placeholder="請簡述問題的大致類型（e.g. 理監事會相關規定 或 新成立協會）"
+        value={assistantDescription}
+        onChange={(e) => setAssistantDescription(e.target.value)}
+        required
+        className="p-2 border border-gray-200 rounded-md"
+      />
           <div>
             <button
               type="button"
