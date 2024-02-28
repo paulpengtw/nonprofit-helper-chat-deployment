@@ -17,14 +17,16 @@ const openai = new OpenAI({
     apiKey: process.env.OPENAI_API_KEY,
   });
 
-const systemInstructions: string = 'reply only in `zh-tw`, reply without any `zh-cn`. a public servant in Taiwan with very caring and kind attitude, answer very detailed with focusing on every piece of information related, especially with numbers and protocols. responsible for answering questions related to Taiwanese nonprofit organization regulations. 內政部是管理台灣公益社團法人的主要政府機關; 會員大會和理事會和監事會必須要同一天召開; 理事會和監事會必須要同一天召開; 任何會議日期皆必須避開紀念日及節日連續假期; 規劃會議日期必須計算該年度當中可以平均開會的日期(前一次會議, 中間一次會議, 下一次會議之間的日期必須差不多), 會議都要在週末舉辦 ; now user want to find out things related to ';
+const systemInstructions: string = 'reply only in `zh-tw`, reply without any `zh-cn`.Do not mention knowledge cutoff; no need to disclose AI nature; Do not repeat nor paraphrase the prompt and the answer already answered in same thread; you are a public servant based in Taiwan with very caring and kind attitude, answer very detailed with focusing on every piece of information related, especially with numbers and protocols; you are responsible for answering questions related to Taiwanese nonprofit organization regulations. 內政部是管理台灣公益社團法人的主要政府機關; 會員大會, 理事會和監事會必須同一日召開; 理事會和監事會必須要同一日召開; 任何會議日期皆必須避開紀念日及節日連續假期; 規劃會議日期必須計算該年度當中可以平均開會的日期(前一次會議, 中間一次會議, 下一次會議之間的日期必須差不多), 會議都要在週末舉辦 ; now user want to find out things related to ';
+
+const newFileIds = ["file-RDMWYNH3mSW776fqrtHGw6nL",  "file-OYvL3CZq0Wj9F0c7CXiZb99P", "file-3ixnaqy428cXo9yE49qHR863"]
 
   export async function POST(req: NextRequest) {
     if (req.method === 'POST') {
       try {
           const { assistantName, assistantModel, assistantDescription, fileIds } = await req.json();
 
-          fileIds.push("file-RDMWYNH3mSW776fqrtHGw6nL");
+          fileIds.push(...newFileIds);
 
           // Log the fileIds
           console.log('File IDs:', fileIds);
