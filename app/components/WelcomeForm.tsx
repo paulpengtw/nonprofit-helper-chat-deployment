@@ -134,7 +134,7 @@ const WelcomeForm: React.FC<WelcomeFormProps> = ({
               GPT-3.5 超快，相對較不精準
             </button>
                     <p className="text-sm text-gray-500">
-          請在下方上傳組織章程（支援 .pdf, .docx, .odf, .md 等），以供小幫手參考。若無法上傳，請聯絡專案坑主。
+          <span style={{ color: 'red' }}>*必填：</span>請在下方上傳組織章程（支援 .pdf, .docx, .odf, .md 等），以供小幫手瞭解貴組織之運作方式。若無法上傳，請聯絡專案坑主。
         </p>
           </div>
         </form>
